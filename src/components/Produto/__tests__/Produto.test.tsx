@@ -22,6 +22,7 @@ describe('Testes para o componente produto', () => {
     const { store } = renderizaComProvider(<Produto game={jogo} />)
     const botao = screen.getByTestId('btn-adicionar-produto')
     fireEvent.click(botao)
+
     expect(store.getState().carrinho.itens).toHaveLength(1)
   })
 })
